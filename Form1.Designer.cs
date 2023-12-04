@@ -34,6 +34,7 @@
             dataGridView1 = new DataGridView();
             comboBox1 = new ComboBox();
             label2 = new Label();
+            supplierbtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -66,11 +67,14 @@
             // 
             // comboBox1
             // 
+            comboBox1.AutoCompleteCustomSource.AddRange(new string[] { "KMDdemo", "test" });
             comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "KMDdemo", "test" });
             comboBox1.Location = new Point(68, 81);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 3;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label2
             // 
@@ -82,12 +86,23 @@
             label2.Text = "Tenant ID";
             label2.Click += label2_Click;
             // 
+            // supplierbtn
+            // 
+            supplierbtn.Location = new Point(665, 81);
+            supplierbtn.Name = "supplierbtn";
+            supplierbtn.Size = new Size(75, 23);
+            supplierbtn.TabIndex = 5;
+            supplierbtn.Text = "Load Data";
+            supplierbtn.UseVisualStyleBackColor = true;
+            supplierbtn.Click += supplierbtn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(67, 176, 42);
             ClientSize = new Size(800, 450);
+            Controls.Add(supplierbtn);
             Controls.Add(label2);
             Controls.Add(comboBox1);
             Controls.Add(dataGridView1);
@@ -109,5 +124,6 @@
         private DataGridView dataGridView1;
         private ComboBox comboBox1;
         private Label label2;
+        private Button supplierbtn;
     }
 }
