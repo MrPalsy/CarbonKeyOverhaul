@@ -41,18 +41,18 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(275, 84);
+            label1.Location = new Point(8, 45);
             label1.Name = "label1";
-            label1.Size = new Size(102, 15);
+            label1.Size = new Size(51, 15);
             label1.TabIndex = 0;
-            label1.Text = "UNSPSC Category";
+            label1.Text = "UNSPSC";
             label1.Click += label1_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(383, 81);
+            textBox1.Location = new Point(70, 45);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(121, 23);
             textBox1.TabIndex = 1;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
@@ -64,13 +64,15 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(806, 229);
             dataGridView1.TabIndex = 2;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellFormatting += dataGridView1_CellFormatting;
             // 
             // comboBox1
             // 
             comboBox1.AutoCompleteCustomSource.AddRange(new string[] { "KMDdemo", "test" });
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "KMDdemo", "test" });
-            comboBox1.Location = new Point(68, 81);
+            comboBox1.Location = new Point(70, 12);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 3;
@@ -79,7 +81,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(6, 84);
+            label2.Location = new Point(8, 15);
             label2.Name = "label2";
             label2.Size = new Size(56, 15);
             label2.TabIndex = 4;
@@ -88,7 +90,7 @@
             // 
             // supplierbtn
             // 
-            supplierbtn.Location = new Point(665, 81);
+            supplierbtn.Location = new Point(8, 84);
             supplierbtn.Name = "supplierbtn";
             supplierbtn.Size = new Size(75, 23);
             supplierbtn.TabIndex = 5;

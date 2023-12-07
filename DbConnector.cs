@@ -44,5 +44,33 @@ namespace CarbonKeyOverhaul
             }
             return dataTable;
         }
+        public DataTable InvoiceDataQuery(string query)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataTable);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exception, log, or throw it as needed
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                if (connection.State != ConnectionState.Closed)
+                {
+                    connection.Close();
+                }
+            }
+            return dataTable;
+        }
     }
 }
