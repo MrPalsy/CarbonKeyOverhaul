@@ -30,6 +30,7 @@ namespace CarbonKeyOverhaul
                     }
                 }
             }
+
             catch (Exception ex)
             {
                 // Handle exception, log, or throw it as needed
@@ -71,6 +72,62 @@ namespace CarbonKeyOverhaul
                 }
             }
             return dataTable;
+        }
+        public DataTable InvoiceDataQuery2(string query2)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                using (SqlCommand command = new SqlCommand(query2, connection))
+                {
+                    connection.Open();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataTable);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exception, log, or throw it as needed
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                if (connection.State != ConnectionState.Closed)
+                {
+                    connection.Close();
+                }
+            }
+            return dataTable;
+        }
+        public DataTable InvoiceDataDestinct(string queryDestinct)
+        {
+            DataTable dataTableDestinct = new DataTable();
+            try
+            {
+                using (SqlCommand command = new SqlCommand(queryDestinct, connection))
+                {
+                    connection.Open();
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataTableDestinct);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exception, log, or throw it as needed
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                if (connection.State != ConnectionState.Closed)
+                {
+                    connection.Close();
+                }
+            }
+            return dataTableDestinct;
         }
     }
 }

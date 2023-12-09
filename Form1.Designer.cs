@@ -64,8 +64,8 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(806, 229);
             dataGridView1.TabIndex = 2;
-            dataGridView1.CellClick += dataGridView1_CellClick;
-            dataGridView1.CellFormatting += dataGridView1_CellFormatting;
+            dataGridView1.CellClick += DataGridView1_CellClick;
+            dataGridView1.CellFormatting += DataGridView1_CellFormatting;
             // 
             // comboBox1
             // 
@@ -76,7 +76,6 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 3;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label2
             // 
@@ -96,7 +95,7 @@
             supplierbtn.TabIndex = 5;
             supplierbtn.Text = "Load Data";
             supplierbtn.UseVisualStyleBackColor = true;
-            supplierbtn.Click += supplierbtn_Click;
+            supplierbtn.Click += Supplierbtn_Click;
             // 
             // Form1
             // 

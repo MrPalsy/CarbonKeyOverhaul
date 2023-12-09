@@ -35,7 +35,7 @@ namespace CarbonKeyOverhaul
         {
 
         }
-        private void supplierbtn_Click(object sender, EventArgs e)
+        private void Supplierbtn_Click(object sender, EventArgs e)
         {
             string textboxContent = textBox1.Text;
 
@@ -46,7 +46,7 @@ namespace CarbonKeyOverhaul
             dataGridviewButtonColumn.Text = "Invoice Data";
             dataGridView1.Columns.Insert(0, dataGridviewButtonColumn);
         }
-        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void DataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             // Check if the cell is in the desired column and row type
             if (dataGridView1.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
@@ -55,10 +55,12 @@ namespace CarbonKeyOverhaul
                 e.Value = "Invoice Data"; // Set the text you want to display on the button
             }
         }
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string textboxContent = textBox1.Text;
             string supplierName = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+
             // Check if the clicked cell is a button cell and the column index matches the button column
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex] is DataGridViewButtonCell)
             {
@@ -68,6 +70,7 @@ namespace CarbonKeyOverhaul
                 // Show invoiceDataForm
                 form2.Show();
             }
+
         }
     }
 }
