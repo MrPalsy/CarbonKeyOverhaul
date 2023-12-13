@@ -46,7 +46,6 @@
             label1.Size = new Size(51, 15);
             label1.TabIndex = 0;
             label1.Text = "UNSPSC";
-            label1.Click += label1_Click;
             // 
             // textBox1
             // 
@@ -54,7 +53,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(121, 23);
             textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // dataGridView1
             // 
@@ -85,7 +83,6 @@
             label2.Size = new Size(56, 15);
             label2.TabIndex = 4;
             label2.Text = "Tenant ID";
-            label2.Click += label2_Click;
             // 
             // supplierbtn
             // 
@@ -112,7 +109,6 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Modification Rule Handler";
-            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
